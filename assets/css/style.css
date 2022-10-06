@@ -346,7 +346,8 @@
             margin-top: .8rem;
         }
         .options {
-            top: 40%;
+            top: 50%;
+            right: 0%;
         }
         .update {
             left: 32%;
