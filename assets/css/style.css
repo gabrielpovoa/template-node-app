@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    transition: all .3s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 8rem;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --purple: #7159C1;
+    --white: #F1F1F1F1;
+    --black: #454545;
+    --box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: var(--purple);
+    padding: 2rem 5%;
+    box-shadow: var(--box-shadow);
+}
+
+header nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+header nav .image-logo {
+    width: 8rem;
+    height: 8rem;
+    padding: .7rem;
+    border-radius: 50%;
+    background-color: var(--black);
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+header nav .image-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+header nav span {
+    color: var(--white);
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+main,
+section {
+    padding: 2rem 5%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 4rem;
+}
+
+main .addUser {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+main .addUser form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+main .addUser form label h2 {
+    margin-bottom: .8rem;
+}
+
+main .addUser form .box {
+    background-color: #FFF;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--black);
+    width: 25rem;
+    padding: .6rem 1rem;
+    border-radius: .3rem;
+}
+
+main .addUser form #sendButton {
+    cursor: pointer;
+    background-color: #ff6201;
+    border-radius: .3rem;
+    padding: .6rem 1rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+
+/* Users field - second box */
+
+main .Users {
+    background-color: var(--purple);
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+}
+
+main .Users .user {
+    border: .1rem solid var(--white);
+    color: #FFF;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+main .Users .headeing h2 {
+    margin-bottom: 2rem;
+    color: #FFF;
+}
+
+main .Users .users-field {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+}
+
+main .Users .user:hover {
+    transform: scale(1.1);
+}
+
+main .Users .user .image {
+    width: 8rem;
+    height: 8rem;
+}
+
+main .Users .user .image img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#options {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+
+/* main .Users .user .content {
+} */
+
+main .Users .user .content span {
+    opacity: .4;
+    text-transform: none;
+}
+
+main .Users .user .content h1 span {
+    margin-left: 1rem;
+    font-size: .8rem;
+    opacity: .5;
+}
+
+main .Users .user .content span:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width:450px) {
+    html {
+        font-size: 55%;
+    }
+    main {
+        padding: 2rem;
+        grid-template-columns: repeat(1 minmax(15rem, 1fr));
+    }
+    main .addUser,
+    main .Users {
+        margin-top: .8rem;
+    }
+}
