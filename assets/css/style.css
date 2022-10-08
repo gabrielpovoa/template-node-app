@@ -116,7 +116,7 @@
     /* Update box */
     
     .update {
-        background-color: #f2f2f2;
+        background-color: #7159C1;
         box-shadow: var(--box-shadow);
         border-radius: .5rem;
         position: absolute;
@@ -126,7 +126,7 @@
         max-width: 100%;
         transform: translate(-50%, -75%);
         display: block;
-        clip-path: polygon(100% 0, 100% 100%, 100% 0, 0 0);
+        clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
     }
     
     .update.active {
@@ -198,7 +198,7 @@
     }
     
     main .Users .user:hover {
-        transform: scale(1.1);
+        opacity: .6;
     }
     
     main .Users .user .image {
@@ -220,6 +220,10 @@
         top: 1rem;
         right: 2rem;
         cursor: pointer;
+    }
+    
+    .fa-xmark {
+        transition: all .3s linear;
     }
     /* main .Users .user .content {
 } */
@@ -253,7 +257,7 @@
         position: absolute;
         right: 5%;
         top: 30%;
-        clip-path: polygon(100% 0, 100% 100%, 100% 0, 0 0);
+        clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
         /* 50% - to mobile version */
     }
     
@@ -279,11 +283,13 @@
         top: 45%;
         left: 50%;
         transform: translate(-50%, -75%);
-        clip-path: polygon(100% 0, 100% 100%, 100% 0, 0 0);
+        /* clip-path: polygon(100% 0, 100% 100%, 100% 0, 0 0); */
+        clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
         display: block;
     }
     
     .delete.active {
+        /* clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0); */
         clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
     }
     
